@@ -1,7 +1,25 @@
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
+// Components
+import Cart from "./components/Cart";
+import Header from "./components/Header";
+import Products from "./components/Products";
+// Context
+import { BookContext } from "./Context";
+// Data
+import { data } from "./data";
 
 function App() {
-	return <div className='App'>App</div>;
+	return (
+		<BookContext.Provider>
+			<div className='App'>
+				<Header />
+				<Routes>
+					<Route path='/' element={<Cart />} />
+					<Route path='/cart' element={<Products />} />
+				</Routes>
+			</div>
+		</BookContext.Provider>
+	);
 }
 
 export default App;

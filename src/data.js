@@ -1,0 +1,51 @@
+export const data = [
+	{
+		id: 1,
+		name: "Simyacı",
+		author: "Paulo Coelho",
+		price: 9.99,
+		image: "https://images-na.ssl-images-amazon.com/images/I/51eqjXwFzwL._SX344_BO1,204,203,200_.jpg",
+	},
+	{
+		id: 2,
+		name: "Yüzyıllık Yalnızlık",
+		author: "Gabriel García Márquez",
+		price: 19.99,
+		image: "https://images-na.ssl-images-amazon.com/images/I/51A1ZxGf94L._SY291_BO1,204,203,200_QL40_ML2_.jpg",
+	},
+	{
+		id: 3,
+		name: "Annemi Bir Kez Daha Görebilsem",
+		author: "Zana Muhsen",
+		price: 16.99,
+		image: "https://cdn.dsmcdn.com//ty284/product/media/images/20220101/17/20085432/6050493/1/1_org.jpg",
+	},
+	{
+		id: 4,
+		name: "Ekmek Kavgası",
+		author: "Orhan Kemal",
+		price: 19.99,
+		image: "https://images-na.ssl-images-amazon.com/images/I/41BJdviD3TL._SX340_BO1,204,203,200_.jpg",
+	},
+	{
+		id: 5,
+		name: "Aşk",
+		author: "Elif Şafak",
+		price: 25.99,
+		image: "https://images-na.ssl-images-amazon.com/images/I/414N7XbRE%2BL._SX344_BO1,204,203,200_.jpg",
+	},
+	{
+		id: 6,
+		name: "Suç ve Ceza",
+		author: "Fyodor Mihayloviç Dostoyevski",
+		price: 29.2,
+		image: "https://cdn.dsmcdn.com//ty224/product/media/images/20211105/1/165856728/6034079/1/1_org.jpg",
+	},
+	{
+		id: 7,
+		name: "Satranç",
+		author: "Stefan Zweig",
+		price: 10.69,
+		image: "https://cdn.dsmcdn.com//ty231/product/media/images/20211107/23/169998660/6034072/1/1_org.jpg",
+	},
+];
