@@ -15,8 +15,19 @@ function App() {
 		cart: [],
 	});
 
+	const addToCart = (book) => {
+		setState({
+			...state,
+			cart: state.cart.find((cartItem) => cartItem.id === book.id)
+				? state.cart.map((cartItem) =>
+						cartItem.id === book.id ? { ...cartItem, count: cartItem.count + 1 } : cartItem
+				  )
+				: [...state.cart, { ...book, count: 1 }],
+		});
+	};
+
 	return (
-		<BookContext.Provider value={{ state: state }}>
+		<BookContext.Provider value={{ state: state, addToCart }}>
 			<div className='App'>
 				<Header />
 				<Routes>

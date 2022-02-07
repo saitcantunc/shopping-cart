@@ -5,7 +5,7 @@ const Products = () => {
 	const context = useContext(BookContext);
 
 	return (
-		<div className='products'>
+		<div className='container'>
 			{context.state.booklist.map((book, index) => (
 				<div className='book' key={index}>
 					<img src={book.image} alt={book.name} />
@@ -13,7 +13,7 @@ const Products = () => {
 						<h4>{book.name}</h4>
 						<p>{book.author}</p>
 						<p>Fiyat: $ {book.price}</p>
-						<button>
+						<button onClick={() => context.addToCart(book)}>
 							<i class='fas fa-cart-plus'></i>
 						</button>
 					</div>
