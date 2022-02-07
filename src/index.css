@@ -28,12 +28,13 @@
 	font-weight: bold;
 }
 
-i {
+.home i,
+.cart i {
 	color: #333;
 	transition: all 0.5s;
 }
 
-i:hover {
+.header i:hover {
 	transform: scale(1.1);
 	text-decoration: underline;
 	color: #f9f9f9;

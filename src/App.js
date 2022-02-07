@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 // Components
 import Cart from "./components/Cart";
@@ -9,8 +10,13 @@ import { BookContext } from "./Context";
 import { data } from "./data";
 
 function App() {
+	const [state, setState] = useState({
+		booklist: data,
+		cart: [],
+	});
+
 	return (
-		<BookContext.Provider>
+		<BookContext.Provider value={{ state: state }}>
 			<div className='App'>
 				<Header />
 				<Routes>
