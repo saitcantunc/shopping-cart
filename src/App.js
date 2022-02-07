@@ -26,8 +26,37 @@ function App() {
 		});
 	};
 
+	const removeFromCart = (id) =>
+		setState({
+			...state,
+			cart: state.cart.filter((cartItem) => cartItem.id !== id),
+		});
+
+	const increase = (id) => {
+		setState({
+			...state,
+			cart: state.cart.map((cartItem) =>
+				cartItem.id === id ? { ...cartItem, count: cartItem.count + 1 } : cartItem
+			),
+		});
+	};
+
+	const decrease = (id) => {
+		setState({
+			...state,
+			cart: state.cart.map((cartItem) =>
+				cartItem.id === id
+					? { ...cartItem, count: cartItem.count > 1 ? cartItem.count - 1 : 1 }
+					: cartItem
+			),
+		});
+	};
+
+	const totalCartCount = state.cart.reduce((total, book) => (total = total + book.count), 0);
+
 	return (
-		<BookContext.Provider value={{ state: state, addToCart }}>
+		<BookContext.Provider
+			value={{ state: state, addToCart, increase, decrease, removeFromCart, totalCartCount }}>
 			<div className='App'>
 				<Header />
 				<Routes>
