@@ -10,11 +10,31 @@
 	font-family: "Quintessential", cursive;
 }
 
-body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+.header {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background: linear-gradient(to bottom, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+.title,
+.home,
+.cart {
+	font-size: 24px;
+}
+
+.title {
+	font-weight: bold;
+}
+
+i {
+	color: #333;
+	transition: all 0.5s;
+}
+
+i:hover {
+	transform: scale(1.1);
+	text-decoration: underline;
+	color: #f9f9f9;
 }

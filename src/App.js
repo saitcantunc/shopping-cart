@@ -14,8 +14,8 @@ function App() {
 			<div className='App'>
 				<Header />
 				<Routes>
-					<Route path='/' element={<Cart />} />
-					<Route path='/cart' element={<Products />} />
+					<Route path='/cart' element={<Cart />} />
+					<Route path='/' element={<Products />} />
 				</Routes>
 			</div>
 		</BookContext.Provider>
