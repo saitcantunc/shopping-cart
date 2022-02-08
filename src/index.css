@@ -11,12 +11,27 @@
 	border: none;
 }
 
+.App {
+	background: linear-gradient(to bottom, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.header-container {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
 .header {
 	height: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	background: linear-gradient(to bottom, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+	background: transparent;
+	width: 100%;
 }
 
 .title,
@@ -39,4 +54,57 @@
 	transform: scale(1.1);
 	text-decoration: underline;
 	color: #f9f9f9;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 5rem;
+	padding: 10px;
+	width: 90%;
+}
+
+.book {
+	padding: 5px;
+	border-radius: 5px;
+	text-align: center;
+	border: 1px solid #333;
+	box-shadow: 1px 1px 15px 3px rgba(0, 0, 0, 0.75);
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+.book img {
+	width: 200px;
+	height: 300px;
+	border-radius: 5px;
+}
+
+.book div {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.book h4 {
+	font-size: 24px;
+}
+
+.book p {
+	font-size: 18px;
+}
+
+.book i {
+	font-size: 24px;
+	margin-top: 10px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.book i:hover {
+	transform: scale(1.1);
 }
