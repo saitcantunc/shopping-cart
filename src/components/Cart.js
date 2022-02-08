@@ -9,7 +9,7 @@ const Cart = () => {
 		.toFixed(2);
 
 	return (
-		<div className='container'>
+		<div className='cart-container'>
 			<h3>Toplam Sepet Tutarı: ${totalCartAmount}</h3>
 
 			{context.state.cart.map((book, index) => (
@@ -21,16 +21,18 @@ const Cart = () => {
 						<p>Fiyat: $ {book.price}</p>
 						<p>Toplam: $ {(book.price * book.count).toFixed(2)}</p>
 						<p>Sepetinizde bu kitaptan toplam {book.count} adet var.</p>
-						<button onClick={() => context.decrease(book.id)}>
-							<i class='fas fa-minus'></i>
-						</button>
-						<button onClick={() => context.removeFromCart(book.id)}>
-							<i class='fas fa-cart-arrow-down'></i>
-						</button>
+						<div className='buttons'>
+							<button onClick={() => context.decrease(book.id)}>
+								<i class='fas fa-minus'></i>
+							</button>
+							<button onClick={() => context.removeFromCart(book.id)}>
+								<i class='fas fa-cart-arrow-down'></i>
+							</button>
 
-						<button onClick={() => context.increase(book.id)}>
-							<i class='fas fa-plus'></i>
-						</button>
+							<button onClick={() => context.increase(book.id)}>
+								<i class='fas fa-plus'></i>
+							</button>
+						</div>
 					</div>
 				</div>
 			))}

@@ -5,7 +5,7 @@ const Products = () => {
 	const context = useContext(BookContext);
 
 	return (
-		<div className='container'>
+		<div className='products-container'>
 			{context.state.booklist.map((book, index) => (
 				<div className='book' key={index}>
 					<img src={book.image} alt={book.name} />
